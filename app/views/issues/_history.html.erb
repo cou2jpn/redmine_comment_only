@@ -9,7 +9,7 @@
 
     <% if journal.details.any? %>
     <ul class="details redmine_comment_only_hidden">
-      <% details_to_strings(journal.details).each do |string| %>
+      <% details_to_strings(journal.visible_details).each do |string| %>
        <li><%= string %></li>
       <% end %>
     </ul>
