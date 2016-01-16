@@ -20,9 +20,7 @@
   };
 
   $(function() {
-    $('.journal:not(.has-notes)').hide();
-    $('.journal .details').hide();
-    $('#history').after("<hr><a id='redmine_comment_only_display_button' href='javascript:void(0)'><%= l(:label_redmine_comment_only_display_all) %></a>");
-    $('#redmine_comment_only_display_button').click(RedmineCommentOnly.displayAll);
+    $('#history').before("<a id='redmine_comment_only_display_button' href='javascript:void(0)'><%= l(:label_redmine_comment_only_hide_detail) %></a>");
+    $('#redmine_comment_only_display_button').click(RedmineCommentOnly.hideDetail);
   }); 
 <% end %>
